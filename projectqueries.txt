@@ -1,0 +1,63 @@
+SELECT Game.ID,Game.name ,Game.releaseDate ,Genre.genreName,
+		Publisher.publisherName, Developer.developerName, Esrb.ageRating
+
+												  FROM Game
+													  JOIN Genre
+													  	ON Game.genreID = Genre.ID
+													  JOIN Publisher
+													 	ON Game.publisherID = Publisher.ID
+													  JOIN Developer
+													  	ON Game.DeveloperID = Developer.ID
+													  JOIN Esrb
+													  	ON Game.esrbID = Esrb.ID
+												  WHERE Game.ID = $ID
+												  
+												  
+  "Query that uses an ID stored by PHP sessions to create 
+  a table with important information about the selected
+  game by using a quad-join."
+												  
+				  
+			
+
+
+SELECT COUNT(*)
+			  FROM Playlist
+			  WHERE gameID = '$gameID'
+			  AND userID = '$userID' 
+			  
+INSERT INTO Playlist(gameID, userID) VALUES('$gameID','$userID')
+
+	"The first query checks if the selected game
+	already is in the playlist, if it isn't, the second
+	query inserts it in the playlist."
+
+
+
+SELECT Image.name FROM Image
+												JOIN Game
+												ON Game.ID = Image.game_ID
+												WHERE game_ID = '$ID'
+												AND Image.name LIKE '%banner%'
+												
+	"A join is first done to connect the game
+	to its images. The images with 'banner' in its
+	name is then selected."
+
+
+
+	SELECT Game.name, Rating.userRating,Image.imageName
+						  	FROM Game
+
+						  	JOIN Rating
+						  	ON Game.ID = Rating.gameID
+
+							JOIN Image
+							ON Game.ID = Image.game_ID
+
+                            WHERE userID = '$userID'                          
+							AND Image.imageName LIKE '%thumbnail%'
+
+	"This query creates a table of the gamenames, ratings and thumbnails
+	to be used in a list of gameratings of the current user."
+						 

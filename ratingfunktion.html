@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> 
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		#rating-list a{
+			margin: 0px;
+			height: 13px;
+			width: 13px;
+			padding:0px;
+			background:url('images/star1.png');
+			display: inline-block;
+		}
+		#rating-list a:hover{
+			background:url('images/star2.png');
+		}
+		#rating-list{
+
+			position:absolute;
+			top: 0px;
+			font-size: 2px;
+			text-align: left;
+		}
+		.rating-list a span{
+			visibility: hidden;
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<div class="rating-list">
+		
+		<a href="" class='star-1'><span>1</span></a>
+		<a href="" class='star-2'><span>2</span></a>
+		<a href="" class='star-3'><span>3</span></a>
+		<a href="" class='star-4'><span>4</span></a>
+		<a href="" class='star-5'><span>5</span></a>
+		<a href="" class='star-6'><span>6</span></a>
+		<a href="" class='star-7'><span>7</span></a>
+		<a href="" class='star-8'><span>8</span></a>
+		<a href="" class='star-9'><span>9</span></a>
+		<a href="" class='star-10'><span>10</span></a>
+
+		
+	</div>
+	
+
+	<script type="text/javascript">
+		 $(document).ready(function(){
+		
+
+			$('.rating-list a').on('mouseover',function(){
+		 		var max=  parseInt($(this).children().html());
+		 		
+		 		for(var i=1;i<=max;i++){
+		 			var str = '.star-'+i;
+					$(str).css({
+		 				background: "url('images/star2.png')"
+		 			});
+
+				}
+				for(var i=(max+1);i<=10;i++){
+					var str = '.star-'+i;
+					$(str).css({
+		 				background: "url('images/star1.png')"
+		 			});	
+				}
+				
+	 		});
+	 	
+
+
+			$('.rating-list a').click(function(){
+				var max=  parseInt($(this).children().html());	
+
+				$.post('insertRating.php',{rating: max},function(data){
+					console.log(data);
+				});
+				console.log('clicked');
+			});
+
+
+
+		});
+		// $('.rating-list a').on('mouseover',function(){
+
+		// });
+	
+
+	</script>
+
+</body>
+</html>

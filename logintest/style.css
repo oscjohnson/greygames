@@ -1,0 +1,206 @@
+*{
+	margin: 0px;	
+	padding	: 0px;	
+}
+body{
+	/*background-image: url('images/navy_blue.png');*/
+	background: #3c3c3c;
+	/*background: -webkit-linear-gradient(top, rgb(107,107,107) 0%,#3c3c3c 100%);  Chrome10+,Safari5.1+ */
+	background-repeat: x-repeat;
+	overflow: scroll;
+}
+
+@font-face {
+  font-family: 'kazuka_el';
+
+  src: url('fonts/KOZGOPRO-EXTRALIGHT.OTF');
+}
+
+@font-face {
+  font-family: 'kazuka_h';
+  src: url('fonts/KOZGOPRO-HEAVY.OTF');
+
+}
+ul{
+	list-style-type: none;
+}
+a{
+	color: white;
+}
+
+input{
+	padding: 10px;
+}
+
+.bold{ font-family: 'verdana';}
+
+#content{
+	margin: 0 auto;
+	width: 960px;
+	height: 800px;
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+#banner{
+	font-weight: normal;
+	width: 960px;
+	margin: 0 auto;
+	
+}
+
+	#banner p a{
+		color: #89b416;
+		text-decoration: none;
+	}
+
+	#banner p {
+		margin-top: 9px;
+		float: left;
+	}
+
+	#banner p{
+		font-family: verdana;
+		font-size: 40px;
+	}
+
+#bannerbanner{
+	width: 960px;
+	height: 80px;
+}
+
+#banner-img{
+	height: 90px;
+	text-align: left;
+}
+
+
+
+#menu-container{
+	width: 960px;
+	overflow: none;
+
+}
+
+	#menu-container button{
+		background: white;
+		border: 0px solid black;
+		padding: 12px;
+	}
+
+	#menu-container ul{
+		
+		height: 40px;
+	}
+
+	#menu-container li{
+		margin: 0px 0px;
+		background: #89b416;
+		float: left;
+		background: ;
+		color: white;
+		font-family: arial;
+		font-weight: bold;
+		/*padding: 10px 40px;*/
+		overflow: none;
+		margin-right: 1px;
+
+		-webkit-transition: color 0.5s;
+		transition: color 0.5s;
+		-webkit-transition:background 0.5s;
+
+
+	}
+	#menu-container li:hover{
+		background: rgba(137,180,22,0.6);
+		cursor: pointer;
+	}
+	#menu-container li a{
+		padding: 10px 40px;
+		display: block;
+ 		text-decoration: none;
+ 	}
+ 	#menu-container li a:visited{
+ 		color: white;
+ 	}
+
+#container-left{
+	/*background: rgba(0,0,0,0.4);*/
+	color: white;
+	font-family: verdana;
+	
+	padding: 8px;
+	-web-box-sizing: box-sizing;
+	margin-top: 0px;
+	width: 700px;
+	float: left;
+}
+#container-right{
+	width: 226px;
+	float: right;
+
+	background: rgba(0,0,0,0.4);
+	color: white;
+	font-family: kazuka_el;
+
+	padding: 8px;
+	-web-box-sizing: box-sizing;
+}
+
+.image-slider{
+	overflow:hidden;
+	height: 260px;
+	width: 2000px;
+	
+	margin: 30px auto;
+	box-shadow: 0px 0px 25px #1c1c1c;
+}
+
+.image-slider-img1{
+	margin: 0 auto;
+	margin: -236px 0 0 0px;
+	width:2000px;
+	background:url('images/assassins-creed--brotherhood-19.jpg') -480px 300px;
+}
+
+.fancybox-skin{
+	height: 270px;
+}
+
+
+
+#search-bar{
+	float: right;
+	margin-top: 0px;
+}
+	#search-bar input{ 
+		width: 300px;
+		border: 2px solid white;
+	}
+
+	#search-bar button img{
+		height: 40px;
+	}
+	#search-bar button{	
+
+		position: relative;
+		top: 15px;
+	}
+	#search-bar button:hover{cursor: pointer;}
+
+	/*FLEXSLIDER*/
+.slides{
+	width: 960px;
+	height: 260px;
+	overflow: hidden;
+}
+#main{
+	margin: 0 auto;
+}
+.flex-control-nav {
+	bottom: 10px;
+}
+.flexslider{
+	border: 0px solid red;
+}
+	/*FLEXSLIDER*/
