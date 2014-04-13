@@ -50,7 +50,7 @@ $(document).ready(function(){
 	
 	
     $(function(){
-      SyntaxHighlighter.all();
+//      SyntaxHighlighter.all();
     });
     $(window).load(function(){
       $('.flexslider').flexslider({
